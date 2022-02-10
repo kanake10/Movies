@@ -6,8 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(
     tableName = "movies"
 )
-
-
 data class Result(
     @PrimaryKey(autoGenerate = true)
     val adult: Boolean,
