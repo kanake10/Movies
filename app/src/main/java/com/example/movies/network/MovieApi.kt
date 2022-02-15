@@ -14,6 +14,13 @@ interface MovieApi {
         pageNumber: Int =1
     ): Response<MovieResponse>
 
-
-
+    @GET("search/movie")
+    fun SearchMovie(
+        @Query("api_key")
+        apiKey: String = "api_key",
+        @Query("page")
+        pageNumber: Int =1,
+        @Query("query")
+        q: String
+    ): Response<MovieResponse>
 }
