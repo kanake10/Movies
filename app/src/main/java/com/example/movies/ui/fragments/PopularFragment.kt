@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movies.R
 import com.example.movies.adapter.MovieAdapter
 import com.example.movies.core.Resource
 import com.example.movies.databinding.FragmentPopularBinding
-import com.example.movies.ui.MoviesActivity
+import com.example.movies.MoviesActivity
 import com.example.movies.ui.viewmodel.MoviesViewModel
 
 class PopularFragment : Fragment() {
@@ -75,9 +76,6 @@ class PopularFragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
         }
     }
-
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

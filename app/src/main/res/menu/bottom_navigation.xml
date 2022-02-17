@@ -5,9 +5,7 @@
         android:title="Popular"
         android:icon="@drawable/ic_popular" />
 
-    <item android:id="@+id/detailFragment"
-        android:title="Liked"
-        android:icon="@drawable/ic_liked" />
+
 
     <item android:id="@+id/searchFragment"
         android:title="Search"
