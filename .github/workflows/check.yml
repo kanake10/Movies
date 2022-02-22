@@ -16,7 +16,7 @@ jobs:
       - name: Set my JDk
         uses: actions/setup-java@v1
         with:
-          java-version: 11
+          java-version: 8
 
       - name: Build Gradle
         run: ./gradlew build
