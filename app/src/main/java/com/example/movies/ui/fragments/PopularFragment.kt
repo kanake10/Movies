@@ -13,7 +13,7 @@ import com.example.movies.R
 import com.example.movies.adapter.MovieAdapter
 import com.example.movies.core.Resource
 import com.example.movies.databinding.FragmentPopularBinding
-import com.example.movies.MoviesActivity
+import com.example.movies.ui.MoviesActivity
 import com.example.movies.ui.viewmodel.MoviesViewModel
 
 class PopularFragment : Fragment() {

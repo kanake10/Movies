@@ -35,7 +35,7 @@ class MoviesActivity : AppCompatActivity() {
         val navController = findNavController(R.id.moviesNavHostFragment)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.popularFragment, R.id.searchFragment, R.id.likedFragment
+                R.id.popularFragment, R.id.searchFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
