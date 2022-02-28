@@ -1,34 +1,31 @@
-name:  Android CI
+name: Android Build
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches:
+      - master
+  push:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout work
-        uses: actions/checkout@v2.3.4
 
-      - name: Set my JDk
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set Up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 8
+          java-version: 11
 
-      - name: Build Gradle
-        run: ./gradlew build
+      - name: Run Spotless Apply
+        run: ./gradlew spotlessApply
 
-      - name: Run Test
-        run: ./gradlew test
+      - name: Run Spotless Check
+        run: ./gradlew spotlessCheck
 
-      - name: Execute gradlew
-        run: chmod +x ./gradlew
+      - name: Run Tests
+        run: ./gradlew testDebugUnitTest
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name : app
-          path:  app/build/outputs/apk/debug/app-debug.apk
+      - name: Build Project
+        run: ./gradlew assembleDebug
