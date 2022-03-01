@@ -9,18 +9,14 @@ interface MovieApi {
     @GET("movie/popular")
     fun getPopularMovies(
         @Query("api_key")
-        apiKey: String = "api_key",
-        @Query("page")
-        pageNumber: Int =1
+        apiKey: String = "api_key"
     ): Response<MovieResponse>
 
     @GET("search/movie")
-    fun SearchMovie(
-        @Query("api_key")
-        apiKey: String = "api_key",
-        @Query("page")
-        pageNumber: Int =1,
+    suspend fun searchForMovies(
         @Query("query")
-        q: String
+        searchQuery: String,
+        @Query("api_Key")
+        apiKey: String = "api_key"
     ): Response<MovieResponse>
 }
