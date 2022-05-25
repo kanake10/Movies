@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    def localProperties = new Properties()
-    localProperties.load(new FileInputStream(rootProject.file("local.properties")))
-
     compileSdk 32
 
+    def localProperties = new Properties()
+    localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+   
     defaultConfig {
         applicationId "com.example.movies"
         minSdk 21
