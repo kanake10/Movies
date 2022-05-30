@@ -1,5 +1,5 @@
 # Movies
-Moviesis a mobile android application that displays the list of movies from the [Movies API](https://developers.themoviedb.org/3/movies) using clean architecture and MVVM .Built  entirely using kotlin among other [Android Architecture Compoonents](https://developer.android.com/topic/architecture)
+Movies is a mobile android application that displays the list of movies from the [Movies API](https://developers.themoviedb.org/3/movies) using clean architecture and MVVM .Built  entirely using kotlin among other [Android Architecture Compoonents](https://developer.android.com/topic/architecture)
  
  ## Tech Stack
  
