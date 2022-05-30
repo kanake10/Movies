@@ -18,7 +18,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MovieDetailsFragment : Fragment() {
-
     private lateinit var binding: FragmentMovieDetailsBinding
     private val viewModel: MovieDetailViewModel by viewModels()
 
@@ -58,16 +57,6 @@ class MovieDetailsFragment : Fragment() {
             }
         }
     }
-
-    private fun hideProgressBar() {
-        binding.progressBar.visibility = View.INVISIBLE
-    }
-
-    private fun showProgressBar() {
-        binding.progressBar.visibility = View.VISIBLE
-
-    }
-
     private fun bindData(movieDetails: MovieDetails?) {
         if (movieDetails != null) {
             binding.movieDetails = movieDetails
@@ -78,5 +67,11 @@ class MovieDetailsFragment : Fragment() {
         } else {
             Toast.makeText(context, getString(R.string.general_error_msg), Toast.LENGTH_SHORT).show()
         }
+    }
+    private fun hideProgressBar() {
+        binding.progressBar.visibility = View.INVISIBLE
+    }
+    private fun showProgressBar() {
+        binding.progressBar.visibility = View.VISIBLE
     }
 }

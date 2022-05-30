@@ -23,7 +23,6 @@ data class MovieDetailsDto(
     @SerializedName("vote_average")
     val rating: Double
 )
-
 fun MovieDetailsDto.toMovieDetails(): MovieDetails {
     return MovieDetails(
         id = id,

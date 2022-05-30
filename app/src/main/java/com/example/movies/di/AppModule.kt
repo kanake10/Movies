@@ -17,7 +17,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
     @Singleton
     @Provides
     fun provideHttpClient(): OkHttpClient {
@@ -43,7 +42,6 @@ object AppModule {
             })
         }.build()
     }
-
     @Provides
     @Singleton
     fun provideMovieApi(okHttpClient: OkHttpClient): MovieApi {
@@ -54,7 +52,6 @@ object AppModule {
             .build()
             .create(MovieApi::class.java)
     }
-
     @Provides
     @Singleton
     fun provideMovieRepository(movieApi: MovieApi): MovieRepository {

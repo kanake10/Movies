@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/cardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -15,11 +15,10 @@
         app:cardCornerRadius="5dp">
 
         <ImageView
-            android:id="@+id/movie_poster"
+            android:id="@+id/moviePoster"
             android:layout_width="wrap_content"
             android:layout_height="190dp"
             android:layout_gravity="center"
-            android:contentDescription="@string/movie_poster"
             android:scaleType="centerInside"
             tools:ignore="ImageContrastCheck">
 

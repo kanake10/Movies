@@ -65,14 +65,13 @@ class PopularFragment : Fragment(), PopularAdapter.MovieItemListener {
         }
     }
     private fun hideProgressBar() {
-       binding.progressBar.visibility = View.INVISIBLE
+       binding.progresBar.visibility = View.INVISIBLE
     }
 
     private fun showProgressBar() {
-        binding.progressBar.visibility = View.VISIBLE
+        binding.progresBar.visibility = View.VISIBLE
 
     }
-
     private fun renderList(movies: List<Movie>) {
         popularAdapter.addData(movies)
     }

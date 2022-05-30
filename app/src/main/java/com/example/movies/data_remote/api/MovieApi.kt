@@ -8,10 +8,8 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface MovieApi {
-
     @GET(POPULAR)
     suspend fun getPopularMovies(): MovieResponse
-
     @GET(MOVIE_DETAILS)
     suspend fun getMovieDetails(@Path("movie_id") movieId: Int): MovieDetailsDto
 }

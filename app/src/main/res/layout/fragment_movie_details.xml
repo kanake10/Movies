@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="movieDetails"
             type="com.example.movies.domain.models.MovieDetails" />
@@ -15,7 +14,7 @@
         tools:context=".presentation.movie_details.MovieDetailsFragment">
 
         <ProgressBar
-            android:id="@+id/progress_bar"
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -33,7 +32,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/iv_movie_poster"
+                    android:id="@+id/iv_moviePoster"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -48,7 +47,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/movie_title"
+                        android:id="@+id/movieTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -59,7 +58,7 @@
                         tools:text="movie" />
 
                     <TextView
-                        android:id="@+id/movie_tagline"
+                        android:id="@+id/movieTagline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
@@ -93,7 +92,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/movie_release_date"
+                            android:id="@+id/movieReleaseDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
@@ -119,7 +118,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/movie_rating"
+                            android:id="@+id/movierating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
@@ -131,14 +130,14 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/movie_overview"
+                        android:id="@+id/movieOverview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@{movieDetails.overview}"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        tools:text="Overview ........." />
+                       />
 
                 </LinearLayout>
             </LinearLayout>

@@ -11,7 +11,6 @@ data class MovieDto(
     val releaseDate: String,
     val title: String,
 )
-
 fun MovieDto.toMovie(): Movie {
     return Movie(
         id = id,

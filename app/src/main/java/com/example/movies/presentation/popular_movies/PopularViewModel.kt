@@ -24,7 +24,6 @@ class PopularViewModel @Inject constructor(
     init {
         getPopularMovies()
     }
-
     private fun getPopularMovies() {
         getPopularMoviesUseCase().onEach {
             _movies.postValue(it)

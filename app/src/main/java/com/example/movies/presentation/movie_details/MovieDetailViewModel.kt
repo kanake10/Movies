@@ -16,11 +16,9 @@ import javax.inject.Inject
 class MovieDetailViewModel @Inject constructor(
     private val getMovieDetailsUseCase: GetMovieDetailsUseCase
 ) : ViewModel() {
-
     private val _movieDetails = MutableLiveData<Resource<MovieDetails>>()
     val movieDetails: LiveData<Resource<MovieDetails>>
         get() = _movieDetails
-
     fun getMovieDetails(movieId: Int) {
         getMovieDetailsUseCase(movieId).onEach {
             _movieDetails.postValue(it)

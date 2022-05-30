@@ -10,7 +10,7 @@ android {
 
     def localProperties = new Properties()
     localProperties.load(new FileInputStream(rootProject.file("local.properties")))
-   
+
     defaultConfig {
         applicationId "com.example.movies"
         minSdk 21
@@ -32,8 +32,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

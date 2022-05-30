@@ -7,11 +7,9 @@ import com.example.movies.domain.repository.MovieRepository
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(private val movieApi: MovieApi) : MovieRepository {
-
     override suspend fun getPopularMovies(): MovieResponse {
         return movieApi.getPopularMovies()
     }
-
     override suspend fun getMovieDetails(movieId: Int): MovieDetailsDto {
         return movieApi.getMovieDetails(movieId)
     }
